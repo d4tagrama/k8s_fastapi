@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-app-api 
+  labels:
+    app: deploy-app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: fastapi-app
+  template:
+    metadata:
+      labels:
+        app: fastapi-app
+    spec:
+      containers:
+      - name: app-frontend
+        image: roid/frontend:v1
+      - name: app-backend
+        image: roid/backend:v1
+        ports:
+        - containerPort: 80

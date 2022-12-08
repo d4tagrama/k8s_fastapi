@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-aplication
+spec:
+  containers:
+  - name: frontend
+    image: roid/frontend
+    ports:
+    - containerPort: 80
+  - name: backend
+    image: roid/backend
+    ports:
+    - containerPort: 80

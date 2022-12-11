@@ -15,11 +15,11 @@ This is a basic example using Kubernetes (Kind Cluster) to deploy multi containe
 ### Generate images
 
 Run the next commands:
-
-`docker build -f Dockerfile_backend -t roid/backend:v1  .`
-`docker build -f Dockerfile_frontend -t roid/frontend:v1  .`
-`docker build -f Dockerfile_frontend_dual_pod -t roid/frontenddualpod:v1  .`
-
+```
+docker build -f Dockerfile_backend -t roid/backend:v1  .
+docker build -f Dockerfile_frontend -t roid/frontend:v1  .
+docker build -f Dockerfile_frontend_dual_pod -t roid/frontenddualpod:v1  .
+```
 
 ### Deploy lab
 
